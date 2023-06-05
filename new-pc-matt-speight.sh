@@ -88,21 +88,79 @@ echo "✅ Thats me done with Npm"
 
 echo "😎😎 Now lets get some cool tools 😎😎"
 
+# now lets check if the user wants to add chrome or firefox
+read -p "🤖 Do you want to add chrome and firefox? (y/n) " wantsBrowser
 
-# now lets get some cool tools
-echo "🤖 Checking, iterm2"
-if ! [ -x "$(command -v iterm2)" ]; then
+if [ "$wantsBrowser" = "y" ]; then
 
-    # If we dont have iterm2 installed then lets install it
-    brew install iterm2
+    # now lets get some cool tools
+    echo "\n🤖 Checking, Chrome"
+    if ! [ -x "$(command -v chrome)" ]; then
+
+        # If we dont have chrome installed then lets install it
+        brew install chrome
+
+    fi
+    echo "✅ Thats me done with Chrome"
+
+    # now lets check if you have firefox installed
+    echo "🤖 Checking, Firefox"
+    if ! [ -x "$(command -v firefox)" ]; then
+
+        # If we dont have firefox installed then lets install it
+        brew install firefox
+
+    fi
+    echo "✅ Thats me done with Firefox"
 
 fi
-echo "✅ Thats me done with iterm2"
+
+# now check if the user wants to add the cool tools
+read -p "🤖 Do you want to add some cool tools? (y/n) " wantsCool
+
+if [ "$wantsCool" = "y" ]; then
+
+    # now lets get some cool tools
+    echo "\n🤖 Checking, iterm2"
+    if ! [ -x "$(command -v iterm2)" ]; then
+
+        # If we dont have iterm2 installed then lets install it
+        brew install iterm2
+
+    fi
+    echo "✅ Thats me done with iterm2"
+
+    # now lets check if you have spotify installed
+    echo "🤖 Checking, Spotify"
+    if ! [ -x "$(command -v spotify)" ]; then
+
+        # If we dont have spotify installed then lets install it
+        brew install spotify
+
+    fi
+    echo "✅ Thats me done with Spotify"
+
+    read -p "🤖 Do you want to add slack? (y/n) " slackAy
+
+    if [ "$slackAy" = "y" ]; then
+    
+            # now lets check if you have slack installed
+            echo "🤖 Checking, Slack"
+            if ! [ -x "$(command -v slack)" ]; then
+    
+                # If we dont have slack installed then lets install it
+                brew install slack
+    
+            fi
+            echo "✅ Thats me done with Slack"
+    
+    fi
+fi
+
+
 
 read -p "✅ All done, Any errors? if not press enter to leave 👋"
 
 echo "\n 😎 You should be good to go now, enjoy 😊"
-
-
 
 exit 1
