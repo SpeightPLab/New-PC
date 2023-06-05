@@ -120,6 +120,16 @@ read -p "🤖 Do you want to add some cool tools? (y/n) " wantsCool
 
 if [ "$wantsCool" = "y" ]; then
 
+    # now lets check if you have whatsapp installed
+    echo "\n🤖 Checking, Whatsapp"
+    if ! [ -x "$(command -v whatsapp)" ]; then
+
+        # If we dont have whatsapp installed then lets install it
+        brew install whatsapp
+
+    fi
+    echo "✅ Thats me done with Whatsapp"
+
     # now lets check if you have visual-studio-code installed
     echo "\n🤖 Checking, Visual Studio Code"
     if ! [ -x "$(command -v code)" ]; then
