@@ -99,4 +99,10 @@ if ! [ -x "$(command -v iterm2)" ]; then
 fi
 echo "✅ Thats me done with iterm2"
 
+read -p "✅ All done, Any errors? if not press enter to leave 👋"
+
+echo "\n 😎 You should be good to go now, enjoy 😊"
+
+
+
 exit 1
