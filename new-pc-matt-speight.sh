@@ -120,7 +120,17 @@ read -p "🤖 Do you want to add some cool tools? (y/n) " wantsCool
 
 if [ "$wantsCool" = "y" ]; then
 
-    # now lets get some cool tools
+    # now lets check if you have visual-studio-code installed
+    echo "\n🤖 Checking, Visual Studio Code"
+    if ! [ -x "$(command -v code)" ]; then
+
+        # If we dont have visual-studio-code installed then lets install it
+        brew install visual-studio-code
+
+    fi
+    echo "✅ Thats me done with Visual Studio Code"
+
+    # now lets check if you have iterm2 installed
     echo "\n🤖 Checking, iterm2"
     if ! [ -x "$(command -v iterm2)" ]; then
 
