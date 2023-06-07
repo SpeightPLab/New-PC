@@ -86,6 +86,45 @@ if ! [ -x "$(command -v npm)" ]; then
 fi
 echo "✅ Thats me done with Npm"
 
+# now lets check if the user wants to add office365, like word, excel and powerpoint
+read -p "🤖 Do you want to add office365? (y/n) " wantsOffice
+
+if [ "$wantsOffice" = "y" ]; then
+
+    # now lets check if you have word installed
+    echo "\n🤖 Checking, Word"
+    if ! [ -x "$(command -v microsoft-word)" ]; then
+
+        # If we dont have word installed then lets install it
+        brew install microsoft-word
+
+    fi
+    echo "✅ Thats me done with Word"
+
+    # now lets check if you have excel installed
+    echo "🤖 Checking, Excel"
+    if ! [ -x "$(command -v microsoft-excel)" ]; then
+
+        # If we dont have excel installed then lets install it
+        brew install microsoft-excel
+
+    fi
+    echo "✅ Thats me done with Excel"
+
+    # now lets check if you have powerpoint installed
+    echo "🤖 Checking, Powerpoint"
+    if ! [ -x "$(command -v microsoft-powerpoint)" ]; then
+
+        # If we dont have powerpoint installed then lets install it
+        brew install microsoft-powerpoint
+
+    fi
+    echo "✅ Thats me done with Powerpoint"
+
+fi
+
+
+
 echo "😎😎 Now lets get some cool tools 😎😎"
 
 # now lets check if the user wants to add chrome or firefox
@@ -129,6 +168,26 @@ if [ "$wantsCool" = "y" ]; then
 
     fi
     echo "✅ Thats me done with Whatsapp"
+
+    # now lets check if you have postman installed
+    echo "\n🤖 Checking, Postman"
+    if ! [ -x "$(command -v postman)" ]; then
+
+        # If we dont have postman installed then lets install it
+        brew install postman
+
+    fi
+    echo "✅ Thats me done with Postman"
+
+    # now lets check if you have lastpass installed
+    echo "\n🤖 Checking, Lastpass"
+    if ! [ -x "$(command -v lastpass)" ]; then
+
+        # If we dont have lastpass installed then lets install it
+        brew install lastpass
+
+    fi
+    echo "✅ Thats me done with Lastpass"
 
     # now lets check if you have visual-studio-code installed
     echo "\n🤖 Checking, Visual Studio Code"
