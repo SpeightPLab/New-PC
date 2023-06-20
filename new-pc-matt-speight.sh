@@ -234,6 +234,43 @@ if [ "$wantsCool" = "y" ]; then
             echo "✅ Thats me done with Slack"
     
     fi
+
+    # now lets check if you have zoom installed
+
+    read -p "🤖 Do you want to add zoom? (y/n) " zoomAy
+
+    if [ "$zoomAy" = "y" ]; then
+    
+            # now lets check if you have zoom installed
+            echo "🤖 Checking, Zoom"
+            if ! [ -x "$(command -v zoom)" ]; then
+    
+                # If we dont have zoom installed then lets install it
+                brew install zoom
+    
+            fi
+            echo "✅ Thats me done with Zoom"
+    
+    fi
+
+    # now lets check if you have asana installed
+
+    read -p "🤖 Do you want to add asana? (y/n) " asanaAy
+
+    if [ "$asanaAy" = "y" ]; then
+    
+            # now lets check if you have asana installed
+            echo "🤖 Checking, Asana"
+            if ! [ -x "$(command -v asana)" ]; then
+    
+                # If we dont have asana installed then lets install it
+                brew install asana
+    
+            fi
+            echo "✅ Thats me done with Asana"
+    
+    fi
+
 fi
 
 
