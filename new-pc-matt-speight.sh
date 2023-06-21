@@ -72,6 +72,7 @@ if ! [ -x "$(command -v node)" ]; then
 
     # If we dont have nodejs installed then lets install it
     brew install node
+    brew install nvm
 
 fi
 echo "✅ Thats me done with Nodejs"
