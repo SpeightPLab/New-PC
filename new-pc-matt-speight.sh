@@ -272,6 +272,26 @@ if [ "$wantsCool" = "y" ]; then
     
     fi
 
+    # now lets check if you have meetingbar installed
+
+    read -p "🤖 Do you want to add meetingbar? (y/n) " meetingbarAy
+
+    if [ "$meetingbarAy" = "y" ]; then
+    
+            # now lets check if you have meetingbar installed
+            echo "🤖 Checking, Meetingbar"
+            if ! [ -x "$(command -v meetingbar)" ]; then
+    
+                # If we dont have meetingbar installed then lets install it
+                brew install meetingbar
+    
+            fi
+            echo "✅ Thats me done with Meetingbar"
+    
+    fi
+
+
+
 fi
 
 
