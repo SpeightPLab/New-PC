@@ -290,6 +290,24 @@ if [ "$wantsCool" = "y" ]; then
     
     fi
 
+    # now lets check if you have tableplus installed
+
+    read -p "🤖 Do you want to add tableplus? (y/n) " tableplusAy
+
+    if [ "$tableplusAy" = "y" ]; then
+    
+            # now lets check if you have tableplus installed
+            echo "🤖 Checking, Tableplus"
+            if ! [ -x "$(command -v tableplus)" ]; then
+    
+                # If we dont have tableplus installed then lets install it
+                brew install tableplus
+    
+            fi
+            echo "✅ Thats me done with Tableplus"
+    
+    fi
+
 
 
 fi
